@@ -1,0 +1,241 @@
+#Class Property#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassProperties
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Instatiating the class Person
+            Person obj = new Person();//Syntax of creating an object of Class Person
+
+            //assign the values to the class property.
+            obj.Name = "Aishu";
+            Console.WriteLine(obj.Name);
+
+            obj.Age = 20;
+            Console.WriteLine(obj.Age);
+
+            obj.City = "Solapur";
+            Console.WriteLine(obj.City);
+
+            obj.HomeAddress = "Solapur South Solapur";
+            Console.WriteLine(obj.HomeAddress);
+
+            obj.Email = "aishu@gmail.com";
+            Console.WriteLine(obj.Email);
+
+            obj.DrivingLicence = "MH132020";
+            Console.WriteLine(obj.DrivingLicence);
+
+            obj.Pan = "PAN123";
+            Console.WriteLine(obj.Pan);
+
+            obj.Aadhar = 213241;
+            Console.WriteLine(obj.Aadhar);
+
+            Console.ReadLine();
+        }
+    }
+
+    class Person
+    {
+        private string name;//Field-valiable Field
+        private int age;
+        private string city;
+        private  string homeaddress;
+        private string email;
+        private string driving_licence;
+        private string pan;
+        private int aadhar;
+
+
+        public string Name //property
+        {
+            get { return name; }
+            set { name = value; }
+        }
+        
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+
+        public string City
+        {
+            get { return city; }
+            set { city = value; }
+        }
+
+        public string HomeAddress
+        {
+            get { return homeaddress; }
+            set { homeaddress = value; }
+        }
+
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        public string DrivingLicence
+        {
+            get { return driving_licence; }
+            set { driving_licence = value; }
+        }
+
+        public string Pan
+        {
+            get { return pan; }
+            set { pan = value; }
+        }
+
+        public int Aadhar
+        {
+            get { return aadhar; }
+            set { aadhar = value; }
+        }
+
+    }
+}
+
+
+
+
+#JaggedArray#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace JaggedArray
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[][] JaggedArray = new int[5][];
+            JaggedArray[0] = new int[2] { 2, 4 };
+            JaggedArray[1] = new int[4] { 11,12,13,14};
+            JaggedArray[2] = new int[3] { 10,20,30};
+            JaggedArray[3] = new int[5] { 7,8,9,5,4};
+            JaggedArray[4] = new int[3] { 1,2,3 };
+
+            for(int i=0;i<JaggedArray.Length;i++)
+            {
+                Console.WriteLine("Elements of ({0})", i);
+
+                for(int j=0;j<JaggedArray[i].Length;j++)
+                {
+                    Console.WriteLine(JaggedArray[i][j]+ "\t");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+#File Handling StreamReader and StreamWriter#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace StreamReadAndWrite
+{
+    class File
+    {
+        public void display()
+        {
+            StreamWriter sw = new StreamWriter(@"C:\Users\PAWAR\Desktop\sample1.txt");
+
+            Console.WriteLine("Enter the text you want to Enter");
+
+            string str = Console.ReadLine();
+
+            sw.WriteLine(str);
+
+            sw.Flush();
+
+            sw.Close();
+
+        }
+    }
+
+
+  class Program
+    {
+        static void Main(string[] args)
+        {
+            File fl = new File();
+            fl.display();
+
+
+            FileStream fs = new FileStream(@"C:\Users\PAWAR\Desktop\sample1.txt", FileMode.OpenOrCreate);
+            StreamReader sr = new StreamReader(fs); // Instatiating to streamReader
+
+            string lines = sr.ReadLine();//trying to read the lines from the existing file if present
+
+            Console.WriteLine(lines);
+
+            sr.Close();
+            fs.Close();
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
+
+
+
+
+#Create Directory#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace CreateDirectory
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            var currentDirectory = Directory.GetCurrentDirectory();
+            Console.WriteLine(currentDirectory);
+            Console.WriteLine(Directory.GetDirectoryRoot(currentDirectory));
+
+            var documentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var directoryName = $@ "{documentPath} \test";
+
+            DirectoryInfo Dinfo = Directory.CreateDirectory(directoryName);
+            Console.WriteLine($"Complete Name od Directory:{Dinfo.FullName},Name:{Dinfo.Name},Parent:{Dinfo.Parent}");
+            Console.ReadLine();
+        }
+    }
+}
+
