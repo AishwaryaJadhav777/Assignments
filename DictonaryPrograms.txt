@@ -1,0 +1,345 @@
+#Dictonary Program using <int,string>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictonaryPgm
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<int, string> x = new Dictionary<int, string>();
+            //add method to Enter or insert Elements to the Dictonary
+            Console.WriteLine("---------------------------------------------------------------------------");
+            x.Add(1, "Banglore");
+            x.Add(2, "Mumbai");
+            x.Add(3, "Pune");
+            x.Add(4, "Hydrabad");
+            x.Add(5, "Chennai");
+            x.Add(6, "Delhi");
+
+            //Index With value
+            x[7] = "Kolkatta";
+            x[8] = "Ahmedabad";
+            x[9] = "Noida";
+            x[10] = "Tiruvantapuram";
+
+            //Accessed the dictonary Element
+            //Console.WriteLine("---------------------------------------------------------------------------");
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            //Removing 6 Elements
+            x.Remove(1);
+            x.Remove(2);
+            x.Remove(3);
+            x.Remove(4);
+            x.Remove(5);
+            x.Remove(6);
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+
+
+            //Pushing Elements
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            x[11] = "Banglore";
+            x[12] = "Mumbai";
+            x[13] = "Pune";
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+            //Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+            //count the Number of Elements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+
+            //Removing 5 Elements
+            x.Remove(7);
+            x.Remove(8);
+            x.Remove(9);
+            x.Remove(10);
+            x.Remove(11);
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+            //Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+            //Pushing Elements
+            x.Add(14, "Hydrabad");
+            x.Add(15, "Chennai");
+            x.Add(16, "Delhi");
+            x.Add(17, "Kolkatta");
+            x.Add(18, "Ahmedabad");
+            x.Add(19, "Noida");
+            x.Add(20, "Tiruvantapuram");
+
+
+
+
+            // Accessed the dictonary Element
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            //Removing 4 Elements
+            x.Remove(12);
+            x.Remove(13);
+            x.Remove(14);
+            x.Remove(15);
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+
+            //Removing 3 Elements
+            x.Remove(16);
+            x.Remove(17);
+            x.Remove(18);
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+            //Removing 2 Elements
+            x.Remove(19);
+            x.Remove(20);
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+
+#Dictonary Program using <string,string>
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictonaryProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Dictionary<string, string> x = new Dictionary<string, string>();
+            //add method to Enter or insert Elements to the Dictonary
+            Console.WriteLine("---------------------------------------------------------------------------");
+            x.Add("1", "Banglore");
+            x.Add("2", "Mumbai");
+            x.Add("3", "Pune");
+            x.Add("4", "Hydrabad");
+            x.Add("5", "Chennai");
+            x.Add("6", "Delhi");
+            
+            //Index With value
+            x["7"] = "Kolkatta";
+            x["8"] = "Ahmedabad";
+            x["9"] = "Noida";
+            x["10"] = "Tiruvantapuram";
+
+            //Accessed the dictonary Element
+            //Console.WriteLine("---------------------------------------------------------------------------");
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            //Removing 6 Elements
+             x.Remove("1");
+             x.Remove("2");
+             x.Remove("3");
+             x.Remove("4");
+             x.Remove("5");
+             x.Remove("6");
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+
+
+            //Pushing Elements
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            x["11"] = "Banglore";
+            x["12"] = "Mumbai";
+            x["13"] = "Pune";
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+            //Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+            //count the Number of Elements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+
+            //Removing 5 Elements
+             x.Remove("7");
+             x.Remove("8");
+             x.Remove("9");
+             x.Remove("10");
+             x.Remove("11");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+            //Console.WriteLine("---------------------------------------------------------------------------");
+
+
+
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+            //Pushing Elements
+            x.Add("14", "Hydrabad");
+            x.Add("15", "Chennai");
+            x.Add("16", "Delhi");
+            x.Add("17", "Kolkatta");
+            x.Add("18", "Ahmedabad");
+            x.Add("19", "Noida");
+            x.Add("20", "Tiruvantapuram");
+
+
+
+
+            // Accessed the dictonary Element
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+            
+            //Removing 4 Elements
+            x.Remove("12");
+            x.Remove("13");
+            x.Remove("14");
+            x.Remove("15");
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+
+            //Removing 3 Elements
+            x.Remove("16");
+            x.Remove("17");
+            x.Remove("18");
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());
+
+            //Removing 2 Elements
+            x.Remove("19");
+            x.Remove("20");
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            foreach (KeyValuePair<string, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);
+            }
+
+            Console.WriteLine("---------------------------------------------------------------------------");
+
+            //count the Number of Eleements Present in dictonary
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+           Console.ReadLine();
+
+        }
+    }
+}
+
