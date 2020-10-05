@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictonaryProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Dictionary<int, string> x = new Dictionary<int, string>();
+            //add method to Enter or insert Elements to the Dictonary
+            x.Add(1, "Banglore");
+            x.Add(2, "Mumbai");
+            x.Add(3, "Pune");
+            x.Add(4, "Hydrabad");
+            x.Add(5, "Chennai");
+            x.Add(6, "Delhi");
+            x.Add(7, "Kolkatta");
+            x.Add(8, "Ahmedabad");
+            x.Add(9, "Noida");
+            x.Add(10, "Tiruvantapuram");
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);//Accessed the dictonary Element
+            }
+
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(1));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(2));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(3));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(4));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(5));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(6));
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+
+
+            
+
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(7));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(8));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(9));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(10));
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+
+
+          
+            x.Add(1, "Banglore");
+            x.Add(2, "Mumbai");
+            x.Add(3, "Pune");
+            x.Add(4, "Hydrabad");
+            x.Add(5, "Chennai");
+            x.Add(6, "Delhi");
+            x.Add(7, "Kolkatta");
+            x.Add(8, "Ahmedabad");
+            x.Add(9, "Noida");
+            x.Add(10, "Tiruvantapuram");
+
+
+
+            foreach (KeyValuePair<int, string> check in x)
+            {
+                Console.WriteLine("Elements of Dictonary are:" + "  " + check.Key + "  " + check.Value);//Accessed the dictonary Element
+            }
+
+
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(1));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(2));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(3));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(4));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(5));
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(6));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(7));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(8));
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(9));
+            Console.WriteLine("Elements Left in the Dictonary after removed:" + x.Remove(10));
+
+            Console.WriteLine("Number Of Elements Present In the Dictonary:{0}", x.Count());//count the Number of Eleements Present in dictonary
+
+
+
+            Console.ReadLine();
+
+        }
+    }
+}
