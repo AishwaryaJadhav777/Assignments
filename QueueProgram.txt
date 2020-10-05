@@ -1,0 +1,165 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace QueueProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Queue<int> X = new Queue<int>();//Queue Object Created
+            //adding Elements
+            X.Enqueue(2);
+            X.Enqueue(4);
+            X.Enqueue(6);
+            X.Enqueue(8);
+            X.Enqueue(10);
+            X.Enqueue(12);
+            X.Enqueue(14);
+            X.Enqueue(16);
+            X.Enqueue(18);
+            X.Enqueue(20);
+
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            //Console.WriteLine("Elements in Queue:{0}" + X);
+            foreach(int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+            //Top most Element in Queue
+            Console.WriteLine("Peek Element of Queue is:" + X.Peek());
+
+
+            //Dequeue()//Removing 6 Elements
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine(X.Contains(12));
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+
+            //Adding Elements
+            X.Enqueue(2);
+            X.Enqueue(4);
+            X.Enqueue(6);
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+
+
+            //Dequeue()//Removing 5 Elements
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine(X.Contains(12));
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+           //Adding Elements
+            X.Enqueue(2);
+            X.Enqueue(4);
+            X.Enqueue(6);
+            X.Enqueue(8);
+            X.Enqueue(10);
+            X.Enqueue(12);
+            X.Enqueue(14);
+            X.Enqueue(16);
+            X.Enqueue(18);
+            X.Enqueue(20);
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+
+            //Dequeue()//Removing 4 Elements
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            
+
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine(X.Contains(8));
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+
+            //Dequeue()//Removing 3 Elements
+            X.Dequeue();
+            X.Dequeue();
+            X.Dequeue();
+            
+
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine(X.Contains(19));
+            Console.WriteLine("-------------------------------------------------------------------------------");
+
+
+            //Dequeue()//Removing 2 Elements
+            X.Dequeue();
+            X.Dequeue();
+            
+
+
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            foreach (int que in X)
+            {
+                Console.WriteLine(" Elements in Queue Are:" + que);
+            }
+            Console.WriteLine("Number of Elements Present in stack:{0}", X.Count());
+            Console.WriteLine(X.Contains(20));
+            Console.WriteLine("-------------------------------------------------------------------------------");
+            Console.ReadLine();
+        }
+    }
+}
