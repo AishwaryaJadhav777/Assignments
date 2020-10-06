@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection;
+
+namespace ReflectionProgram
+{
+    
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Type T = typeof(int);//Initializing the T as typeofstring (type=>datatype)
+            //use of reflection below
+            //trying to find what sort the data related to T
+            Console.WriteLine("Name:{0}", T.Name);//What typ of method or type or field
+            Console.WriteLine("FullName:{0}", T.FullName);
+            Console.WriteLine("Namespace:{0}", T.Namespace);
+            Console.WriteLine("BaseType:{0}", T.BaseType);
+
+            int i = 42;
+            System.Type type = i.GetType();
+            System.Console.WriteLine(type);
+            //Console.WriteLine(typeof(i));
+
+            //Example of uses of reflection to obtain full name of the loaded assembly.
+            System.Reflection.Assembly info = typeof(System.Int32).Assembly;
+            Console.WriteLine(info);
+
+            Console.ReadLine();
+
+
+        }  
+        
+
+    }
+}
