@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DelegateProgram
+{
+    public delegate void AddDelegate(int a, int b);
+    public delegate string sayDelegate(string str);
+    public delegate void MulDelegate(int x, int y);
+    class Program
+    {
+
+        //Non static method
+        public void Mulnums(int x, int y)
+        {
+            Console.WriteLine(x * y);
+        }
+
+
+        //Non static method
+        public void Addnums(int a,int b)
+        {
+            Console.WriteLine(a + b);
+        }
+
+        //Static method
+        public static string sayhello(string name)
+        {
+            Console.WriteLine(" Hello " + name + " Gud Noon ");
+            return name;
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();//Instatiated to class program
+            AddDelegate Ad = new AddDelegate(p.Addnums);//Passing the method Addnums to th delegate
+            Ad(100, 50);
+            MulDelegate Ml = new MulDelegate(p.Mulnums);
+            Ml(5, 5);
+            sayDelegate Sd = new sayDelegate(Program.sayhello);//Passing the method sayhello to the delegate
+            Sd("Guys");
+            //p.Addnums(100, 50);
+            Console.ReadLine();
+        }
+    }
+}
