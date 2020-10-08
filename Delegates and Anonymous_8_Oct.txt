@@ -1,0 +1,219 @@
+//Delegate Program//Consist of return type,non return type,bool type functions.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace delegate1
+{
+    public delegate void CheckEvenDelegate(int x);
+    public delegate void PrintTableDelegate(int n);
+    //------------------------------------------------------//
+    public delegate bool CheckEven1Delegate(int x);
+    public delegate bool CheckLowerDelegate(String str);
+    public delegate bool CheckUpperDelegate(String str);
+    //------------------------------------------------------//
+    public delegate int ADDNUMDelegate(int x, int y, int z);
+    public delegate int MULNUMDelegate(int x, int y, int z);
+    public delegate string DisplayDelegate(string str);
+
+
+    class Program
+    {
+        //return type
+        public static void CheckEven(int x)
+        {
+            if(x%2==0)
+            {
+                Console.WriteLine("Even Number");
+            }
+            else
+            {
+                Console.WriteLine("Odd Number");
+            }
+
+        }
+        public static void PrintTable(int num=1)
+        {
+            
+            for (int i=1;i<=10;i++)
+            {
+                Console.WriteLine("{0}*{1}={2}",num,i,i*num);
+            }
+            
+        }
+
+
+        //bool type
+        public static bool CheckEven1(int x)
+        {
+            if (x % 2 == 0)
+                return true;
+            else
+                return false;
+        }
+
+        public static bool CheckUpper(string str1)
+        {
+            return str1.Equals(str1.ToUpper());
+        }
+
+
+        public static bool CheckLower(string str)
+        {
+            return str.Equals(str.ToLower());
+        }
+
+        //Non return type
+        public static int ADDNUM(int x,int y,int z)
+        {
+            return x + y + z;
+        }
+
+        public static int MULNUM(int x,int y,int z)
+        {
+            return x * y * z;
+        }
+
+        public static string Display(string str)
+        {
+            return str;
+        }
+
+
+
+     static void Main(string[] args)
+        {
+            //return type
+            CheckEvenDelegate obj = new CheckEvenDelegate(CheckEven);
+            obj(20);
+
+            PrintTableDelegate obj1 = new PrintTableDelegate(PrintTable);
+            obj1(2);
+
+            //bool type
+            CheckEven1Delegate obj2 = new CheckEven1Delegate(CheckEven1);
+            obj2(30);
+
+            CheckUpperDelegate obj4 = new CheckUpperDelegate(CheckUpper);
+            bool result1 = obj4.Invoke("AISHU");
+            Console.WriteLine(result1);
+
+            CheckLowerDelegate obj3 = new CheckLowerDelegate(CheckLower);
+            bool result=obj3.Invoke("aishu");
+            Console.WriteLine(result);
+
+            //Non return type
+            ADDNUMDelegate obj5 = new ADDNUMDelegate(ADDNUM);
+            int num=obj5(10, 20, 30);
+            Console.WriteLine(num);
+
+            MULNUMDelegate obj6 = new MULNUMDelegate(MULNUM);
+            int num1=obj6(2, 2, 2);
+            Console.WriteLine(num1);
+
+            DisplayDelegate obj7 = new DisplayDelegate(Display);
+            string str1=obj7("Hello World");
+            Console.WriteLine(str1);
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
+
+
+#Anonymous Programs# Consist of return type,non return type and bool type function
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnonymousProgram
+{
+    public delegate string GreetingsDelegate(string str);//Define the delegate
+    public delegate string GreetingDelegate1(string str);
+    public delegate int AddDelegate(int a, int b);
+    public delegate int MulDelegate(int x, int y);
+    //----------------------------------------------------//
+    public delegate void GreetingsDelegate(string str);
+    public delegate void PetDelegate(string pet);
+    //----------------------------------------------------//
+    public delegate bool CheckUpperDelegate(string str);
+    public delegate bool CheckLowerDelegare(string str);
+
+    class Program
+    {
+       static void Main(string[] args)
+        {
+            //Instantiate the delegate
+            //--------------------------------------Non return type--------------------------------------//
+            GreetingsDelegate obj = delegate (string name)
+            {
+                return " Hello " + name + " Very Good Morning ";
+
+            };
+            string str = obj.Invoke("Guys");
+            Console.WriteLine(str);
+
+            GreetingsDelegate obj1 = delegate (string name)
+              {
+                  return " This is " + name +  " Method ";
+              };
+            string str1 = obj1.Invoke("Anonymouus");
+            Console.WriteLine(str1);
+
+
+            AddDelegate obj2 = delegate (int a, int b)
+              {
+                  return a + b;
+              };
+            int result = obj2.Invoke(10, 20);
+            Console.WriteLine(result);
+
+            MulDelegate obj3 = delegate (int x, int y)
+              {
+                  return  x - y;
+              };
+            int result1 = obj3.Invoke(40, 20);
+            Console.WriteLine(result1);
+
+            //------------------------------------------return type------------------------------------//
+            PetDelegate p = delegate (string mypet)
+            {
+                Console.WriteLine("My Favorite pet is {0}", mypet);
+                Console.WriteLine("And I Like {0} aslo", fav);
+
+            };
+
+            p("Cat");
+
+            GreetingsDelegate obj1 = delegate (string name)
+            {
+                Console.WriteLine(" Hello Friends " + name + "");
+            };
+            obj1("Good Noon");
+
+            
+            //-----------------------------------------------bool type--------------------------------------//
+            CheckUpperDelegate check1 = delegate (string str)
+            {
+                return str.Equals(str.ToUpper());
+            };
+            check1("AISHU");
+
+            CheckLowerDelegare check2 = delegate (string str)
+              {
+                  return str.Equals(str.ToLower());
+              };
+            check2("AISHU");
+
+            Console.ReadLine();
+        }
+    }
+}
