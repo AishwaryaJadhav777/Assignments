@@ -1,0 +1,257 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello World");
+        }
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Programming is fun");
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is Printing");
+        }
+    }
+}
+
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This is Printing Again");
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Yeyy! This is Crazy");
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            Button b = new Button();//Reference to the button
+            b.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b.Size = new Size(100, 50);
+            b.Location = new Point(350, 150);
+            this.Controls.Add(b);//Controling Mechanism of button Should go to center
+
+            //show the Messge
+            b.Click += new EventHandler(button1_Click);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Yeyy! This is Printing Crazy");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
