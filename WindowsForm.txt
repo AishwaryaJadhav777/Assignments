@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsAnonymousPgm
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button b1 = new Button();//Reference to the button
+            b1.Text = "Click Button";//Test Implemented as "Click" on the button apperanace
+            b1.Size = new Size(100, 50);
+            b1.Location = new Point(150, 150);
+            this.Controls.Add(b1);//Controling Mechanism of button Should go to center
+
+
+
+            //delegates with Anonymous Method
+
+            b1.Click += delegate (object sender1, EventArgs e1)
+            {
+                MessageBox.Show("Hello World!!!");
+            };
+
+            b1.Click += delegate (object sender1, EventArgs e1)
+            {
+                MessageBox.Show("Programming is Fun!!!");
+            };
+
+
+            b1.Click += delegate (object sender2, EventArgs e2)
+            {
+                MessageBox.Show("Programming is Fun!!!!!!");
+            };
+
+            b1.Click += delegate (object sender2, EventArgs e2)
+            {
+                MessageBox.Show("This id Printing");
+            };
+
+
+            b1.Click += delegate (object sender3, EventArgs e3)
+            {
+                MessageBox.Show("This id Printing");
+            };
+
+            b1.Click += delegate (object sender3, EventArgs e3)
+            {
+                MessageBox.Show("This id Printing again");
+            };
+
+
+            b1.Click += delegate (object sender4, EventArgs e4)
+            {
+                MessageBox.Show("This is Printing again");
+
+            };
+
+            b1.Click += delegate (object sender4, EventArgs e4)
+            {
+                MessageBox.Show("Yeyy! This is crazy");
+            };
+
+
+
+            b1.Click += delegate (object sender5, EventArgs e5)
+            {
+                MessageBox.Show("Yeyy! This is crazy");
+                
+            };
+
+            b1.Click += delegate (object sender5, EventArgs e5)
+            {
+                MessageBox.Show("Yeyy! This is Printing crazy");
+            };
+
+
+
+        }
+    }
+}
