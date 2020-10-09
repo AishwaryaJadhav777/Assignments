@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MultiThread
+{
+    class Program
+    {
+        //Non static Return Method
+        public double CalSum(int num)
+        {
+            double sum = 0;
+            for(int i=1;i<=num;i++)
+            {
+                sum += i;
+            }
+            return sum;
+        }
+
+        public int PrintTable(int n)
+        {
+            for(int i=1;i<=10;i++)
+            {
+                Console.WriteLine("{0}*{1}={2}",+n,i, n * i);
+            }
+            return n;
+        }
+
+        public string Display()
+        {
+            return "This is Non Static Return Method";
+        }
+
+        //Static Method
+        static void Thread1()
+        {
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("Thread1 is started at the position:" + i);
+            }
+        }
+        static void Thread2()
+        {
+            int i;
+            for (i = 1; i < 15; i++)
+            {
+                if (i == 10)
+                {
+                    Console.WriteLine("Thread2 Sleeping for 10Seconds");
+                    Thread.Sleep(10000);
+                }
+            }
+            Console.WriteLine("Thread2 is started at the position:" + i);
+        }
+
+        static void Thread3()
+        {
+            for (int i = 1; i < 15; i++)
+            {
+                Console.WriteLine("Thread3 is started at the position:" + i);
+            }
+        }
+        static void Thread4()
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                Console.WriteLine("Thread4 is started at the position:" + i);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+           
+            //Create the Child Thread Class
+            Program obj = new Program();
+            double sum1=0;
+
+            int result1 = 0;
+
+            string str = null;
+            
+            string result2 = obj.Display();
+            Console.WriteLine(result2);
+
+            Thread T5 = new Thread(()=> { sum1 = obj.CalSum(9); });
+            T5.Start();
+            Console.WriteLine(sum1);
+
+            Thread T6 = new Thread(() => { result1 = obj.PrintTable(10); });
+            T6.Start();
+            Console.WriteLine(result1);
+
+
+            Thread T7 = new Thread(() => { str = obj.Display(); });
+            T7.Start();
+            Console.WriteLine(str);
+
+            Thread T1 = new Thread(Thread1);
+            Thread T2 = new Thread(Thread2);
+            Thread T3 = new Thread(Thread3);
+            T1.Start();
+            T2.Start();
+            T3.Start();
+            //Thread3();
+            Console.ReadLine();
+
+        }
+    }
+}
