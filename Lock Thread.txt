@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Threading;
+
+namespace CsharpJoin
+{
+    class Program
+    {
+
+        public void Display()
+        {
+            lock (this)//Lock the other thread to excute where the current thread is sleeping
+            {
+                Console.WriteLine("Csharp IS an");
+                Thread.Sleep(5000);
+                Console.WriteLine("Object Oriented Programming Language");
+            }
+        }
+        
+        
+ static void Main(string[] args)
+        {
+           
+            Console.WriteLine("Main thread Started");
+            Thread T1 = new Thread(Thread1);
+            Thread T2 = new Thread(Thread2);
+            Thread T3 = new Thread(Thread3);
+            T1.Start();
+            T2.Start();
+            T3.Start();
+            T1.Join();
+            T2.Join();
+            T3.Join();
+            Console.WriteLine("Main Thread is Exiting");
+            Console.ReadLine();
+        }
+    }
+}
