@@ -1,0 +1,230 @@
+#add method#
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				$("p").append("<b>Aishu</b>.");
+			});
+
+			$("#button2").click(function(){
+				$("ol").append("<li>More</li>");
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button3").click(function(){
+				$("p").prepend("<b>Good</b>.");
+			});
+            
+                                                         $("#button4").click(function(){
+				$("p").prepend("<li>HTML</li>");
+			});
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button5").click(function(){
+				$("img").before("<b>Before</b>");
+			});
+            
+                                                        $("#button6").click(function(){
+				$("img").after("<i>After</i>");
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<p>My name is</p>
+	<p>Rani</p>
+
+	<ol>
+		<li>Kristal<li>
+		<li>dezy<li>
+		<li>Roma<li>
+	</ol>
+
+	<button id="button1">Append Text</button>
+	<button id="button2">Append List Item</button>
+
+
+	<p>Morning.</p>
+
+	<ol>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>BootStrap</li>
+	</ol>
+
+    <button id="button3">Prepend Text</button>
+	<button id="button4">Prepend List Item</button>
+	<img src="pic.jpg" alt="waterfall" width="300" height="140"><br><br>
+
+    <button id="button5">Insert Before</button>
+	<button id="button6">Insert After</button>
+
+
+
+
+</body>
+</html>
+
+
+
+#Remove Method#
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("ol").remove();
+			});
+
+			$("#button1").click(function(){
+				$("p").remove("#sweet");
+			});
+			$("#button2").click(function(){
+				$("td").empty();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<p>Welcome to Dxc</p>
+	<p>This is Aishwarya</p>
+	<p id="sweet">JQUERY is a java script library</p>
+	<p id="sweet">JavaScript is a scripting language</p>
+
+	<ol>
+		<li>Apple</li>
+		<li>Banana</li>
+		<li>PineApple</li>
+		<li>Mango</li>
+		<li>Papaya</li>
+	</ol>
+	<table border="1">
+		<tr>
+			<th colspan="4">Colors
+			</th>
+		</tr>
+		<tr>
+			<td>Black</td>
+			<td>Blue</td>
+			<td>Red</td>
+			<td>Pink</td>
+		</tr>
+
+	</table>
+	<br>
+
+	<button>Remove</button>
+
+	<button id="button1">Empty</button>
+	<button id="button2">Filter</button>
+
+</body>
+</html>
+
+
+#Get method#
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get</title>
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				alert("Text: "+$("#test").text());
+
+			});
+			
+			$("#button2").click(function(){
+				alert("HTML: "+$("#test").html());
+
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button3").click(function(){
+				alert("Value:" +$("#test1").val());
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button4").click(function(){
+				alert($("#pid").attr("href"));
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+	<button id="button1">Show Text</button>
+	<button id="button2">Show HTML</button>
+	<p>Name:<input type="text" id="test1"></p>
+	
+    <button id="button3">Show Value</button>
+	<p><a href="https://www.w3schools.com" id="pid">W3Schools.com</a></p>
+	
+	<button id="button4">Show href value</button>
+
+</body>
+</html>
+
+
+#Set Method#
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				$("#test1").text("Hello World");
+			});
+			$("#button2").click(function(){
+				$("#test2").html("<b>Have a Good day</b>");
+			});
+			$("#button3").click(function(){
+				$("#test3").val("aish");
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<p id="test1">This is Paragraph</p>
+	<p id="test2">This is Another Paragraph</p>
+
+	<p>Input Field:<input type="text" id="test3" value="warya"></p>
+
+	<button id="button1">Set Text</button>
+	<button id="button2">Set HTML</button>
+	<button id="button3">Set Value</button>
+
+</body>
+</html>
