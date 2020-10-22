@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get</title>
+	<script type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				alert("Text: "+$("#test").text());
+
+			});
+			
+			$("#button2").click(function(){
+				alert("HTML: "+$("#test").html());
+
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button3").click(function(){
+				alert("Value:" +$("#test1").val());
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button4").click(function(){
+				alert($("#pid").attr("href"));
+			});
+		});
+		
+	</script>
+</head>
+<body>
+	<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+	<button id="button1">Show Text</button>
+	<button id="button2">Show HTML</button>
+	<p>Name:<input type="text" id="test1"></p>
+	
+    <button id="button3">Show Value</button>
+	<p><a href="https://www.w3schools.com" id="pid">W3Schools.com</a></p>
+	
+	<button id="button4">Show href value</button>
+
+</body>
+</html>
+
+

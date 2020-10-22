@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("ol").remove();
+			});
+
+			$("#button1").click(function(){
+				$("p").remove("#sweet");
+			});
+			$("#button2").click(function(){
+				$("td").empty();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<p>Welcome to Dxc</p>
+	<p>This is Aishwarya</p>
+	<p id="sweet">JQUERY is a java script library</p>
+	<p id="sweet">JavaScript is a scripting language</p>
+
+	<ol>
+		<li>Apple</li>
+		<li>Banana</li>
+		<li>PineApple</li>
+		<li>Mango</li>
+		<li>Papaya</li>
+	</ol>
+	<table border="1">
+		<tr>
+			<th colspan="4">Colors
+			</th>
+		</tr>
+		<tr>
+			<td>Black</td>
+			<td>Blue</td>
+			<td>Red</td>
+			<td>Pink</td>
+		</tr>
+
+	</table>
+	<br>
+
+	<button>Remove</button>
+
+	<button id="button1">Empty</button>
+	<button id="button2">Filter</button>
+
+</body>
+</html>

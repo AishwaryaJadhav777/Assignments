@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				$("p").append("<b>Aishu</b>.");
+			});
 
+			$("#button2").click(function(){
+				$("ol").append("<li>More</li>");
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button3").click(function(){
+				$("p").prepend("<b>Good</b>.");
+			});
+            
+            $("#button4").click(function(){
+				$("p").prepend("<li>HTML</li>");
+			});
+
+		});
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button5").click(function(){
+				$("img").before("<b>Before</b>");
+			});
+            
+            $("#button6").click(function(){
+				$("img").after("<i>After</i>");
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<p>My name is</p>
+	<p>Rani</p>
+
+	<ol>
+		<li>Kristal<li>
+		<li>dezy<li>
+		<li>Roma<li>
+	</ol>
+
+	<button id="button1">Append Text</button>
+	<button id="button2">Append List Item</button>
+
+
+	<p>Morning.</p>
+
+	<ol>
+		<li>CSS</li>
+		<li>JavaScript</li>
+		<li>BootStrap</li>
+	</ol>
+
+    <button id="button3">Prepend Text</button>
+	<button id="button4">Prepend List Item</button>
+	<img src="pic.jpg" alt="waterfall" width="300" height="140"><br><br>
+
+    <button id="button5">Insert Before</button>
+	<button id="button6">Insert After</button>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Set</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#button1").click(function(){
+				$("#test1").text("Hello World");
+			});
+			$("#button2").click(function(){
+				$("#test2").html("<b>Have a Good day</b>");
+			});
+			$("#button3").click(function(){
+				$("#test3").val("aish");
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<p id="test1">This is Paragraph</p>
+	<p id="test2">This is Another Paragraph</p>
+
+	<p>Input Field:<input type="text" id="test3" value="warya"></p>
+
+	<button id="button1">Set Text</button>
+	<button id="button2">Set HTML</button>
+	<button id="button3">Set Value</button>
+
+</body>
+</html>
