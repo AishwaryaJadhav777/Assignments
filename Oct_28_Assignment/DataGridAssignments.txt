@@ -1,0 +1,296 @@
+//Student Table//
+aspx code
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataView.aspx.cs" Inherits="DataGridASP.DataView" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <p>This is DataGrid Contains DataTable</p>
+            <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingItemStyle BackColor="White" />
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            </asp:DataGrid>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+
+//cs code//
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace DataGridASP
+{
+    public partial class DataView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            //Establish the connection to the database
+            using (SqlConnection Connect=new SqlConnection("data Source=.; database=Training; integrated security=SSPI"))
+            {
+                
+                SqlDataAdapter SDE = new SqlDataAdapter("select * from student",Connect);//To retrive the data from database
+                DataSet ds = new DataSet();//to convert the data into the grid.
+                SDE.Fill(ds);
+                DataGrid1.DataSource = ds;
+                DataGrid1.DataBind();
+
+            }
+
+        }
+
+       
+    }
+}
+
+
+
+
+//Employee Table//
+aspx code
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataView.aspx.cs" Inherits="DataGridASP.DataView" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <p>This is DataGrid Contains DataTable</p>
+            <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingItemStyle BackColor="White" />
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            </asp:DataGrid>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+//cs code//
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace DataGridASP
+{
+    public partial class DataView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            //Establish the connection to the database
+            using (SqlConnection Connect=new SqlConnection("data Source=.; database=Training; integrated security=SSPI"))
+            {
+                
+                SqlDataAdapter SDE = new SqlDataAdapter("select * from Employee",Connect);//To retrive the data from database
+                DataSet ds = new DataSet();//to convert the data into the grid.
+                SDE.Fill(ds);
+                DataGrid1.DataSource = ds;
+                DataGrid1.DataBind();
+
+            }
+
+        }
+
+       
+    }
+}
+
+
+//Indian Cricket Team Table//
+aspx code
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataView.aspx.cs" Inherits="DataGridASP.DataView" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <p>This is DataGrid Contains DataTable</p>
+            <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingItemStyle BackColor="White" />
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            </asp:DataGrid>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+//cs code//
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace DataGridASP
+{
+    public partial class DataView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            //Establish the connection to the database
+            using (SqlConnection Connect=new SqlConnection("data Source=.; database=Training; integrated security=SSPI"))
+            {
+                
+                SqlDataAdapter SDE = new SqlDataAdapter("select * from Indian_Cricket_Team",Connect);//To retrive the data from database
+                DataSet ds = new DataSet();//to convert the data into the grid.
+                SDE.Fill(ds);
+                DataGrid1.DataSource = ds;
+                DataGrid1.DataBind();
+
+            }
+
+        }
+
+       
+    }
+}
+
+
+//Indian Railway System Table//
+aspx code
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DataView.aspx.cs" Inherits="DataGridASP.DataView" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <p>This is DataGrid Contains DataTable</p>
+            <asp:DataGrid ID="DataGrid1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <AlternatingItemStyle BackColor="White" />
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <ItemStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
+                <SelectedItemStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
+            </asp:DataGrid>
+            
+        </div>
+    </form>
+</body>
+</html>
+
+//cs code//
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace DataGridASP
+{
+    public partial class DataView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            //Establish the connection to the database
+            using (SqlConnection Connect=new SqlConnection("data Source=.; database=Training; integrated security=SSPI"))
+            {
+                
+                SqlDataAdapter SDE = new SqlDataAdapter("select * from Indian_Railway_System",Connect);//To retrive the data from database
+                DataSet ds = new DataSet();//to convert the data into the grid.
+                SDE.Fill(ds);
+                DataGrid1.DataSource = ds;
+                DataGrid1.DataBind();
+
+            }
+
+        }
+
+       
+    }
+}
+
+
+//Bank Table//
+cs code
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace DataGridASP
+{
+    public partial class DataView : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+            //Establish the connection to the database
+            using (SqlConnection Connect=new SqlConnection("data Source=.; database=Training; integrated security=SSPI"))
+            {
+                
+                SqlDataAdapter SDE = new SqlDataAdapter("select * from Bank",Connect);//To retrive the data from database
+                DataSet ds = new DataSet();//to convert the data into the grid.
+                SDE.Fill(ds);
+                DataGrid1.DataSource = ds;
+                DataGrid1.DataBind();
+
+            }
+
+        }
+
+       
+    }
+}
