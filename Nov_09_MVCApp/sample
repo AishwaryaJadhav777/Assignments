@@ -1,1 +1,92 @@
+//index.cshtml
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h3>Registeration Form</h3>
+    <p style="font-family:Cambria;">Select The Music you like</p>
+    <p><a href="Classic" class="btn btn-primary ">Classic </a></p>
+    <p><a href="Romantic" class="btn btn-primary">Romantic </a></p>
+    <p><a href="Mashup" class="btn btn-primary ">Mashup </a></p>
+   
+</div>
+
+
+//Contact.cshtml
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h1>@ViewBag.Aishu</h1>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+
+//MusicStroreController.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace MVCApplication.Controllers
+{
+    public class MusicStoreController : Controller
+    {
+        // GET: MusicStore
+        [ActionName("store")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [ActionName("Variable")]//action Selector
+        [HttpGet]//ActionVerbs
+        public string Welcome()
+        {
+            return "Hello This is Example of Action Selector!!!!";
+        }
+        [ActionName("ExampleSelector")]
+        [HttpPost]
+        public String Examples()
+        {
+            return "Action Example";
+        }
+        [ActionName("Param")]
+        [HttpDelete]
+        public void function()
+        {
+            Response.Write("You have Selected Romantic Music");
+        }
+        public string ShowMusic(string Name)
+        {
+            return(" You have selected :" + Name + "Music");
+        }
+    }
+}
+//Path is going to be:http://LocalHost/MusicStrore/Function
+
+
+//About.cshtml
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<h1>@ViewBag.Aishu</h1>
+<h2>@ViewBag.Var</h2>
+
+<p>Use this area to provide additional information.</p>
 
