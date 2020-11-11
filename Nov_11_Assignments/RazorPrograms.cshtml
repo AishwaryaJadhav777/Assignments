@@ -1,0 +1,99 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Hello,This is Index View</h1>
+    </div>
+    <div>
+        <h1>This is an Example of Single Line Expression</h1>
+        <h2>This is a Razor Syntax view and implemented single line Expression</h2>
+        <label>Todays Date And Time is- @DateTime.Now</label><br />
+        <label>Addition is => @(20 + 20)</label><br />
+        <label>Substraction is => @(20 - 10)</label><br />
+        <label>Multiplication is => @(2 * 20)</label><br />
+        <label>Division is => @(20 / 20)</label>
+    </div>
+    <p>This is an Example of Multiline Expression</p>
+    <div>
+        Inorder to work with razor multi line Expression we syntax is:
+        @{
+            var a = 10;
+            var b = 20;
+            var c = a + b;
+            var name = "This is Aishwarya";
+            var Job = "Associate Professional";
+            var ColorsList = new List<string> { "White", "Black", "Pink", "Blue", "Yellow", "Green" };
+            var NumberList = new List<int> { 10, 20, 30, 40, 50 };
+        }
+    </div>
+    <label>Addition is : @c</label><br />
+    <label>Name : @name</label><br />    <div>
+
+        <label>Job : @Job</label><br />
+        <label>List of Colors : @ColorsList</label><br />
+        <label>Number List : @NumberList.FirstOrDefault()</label>
+    </div>
+
+                                         <div>
+                                             <h2>List of Colors</h2>
+
+                                             @foreach (var item in ColorsList)
+                                             {
+                                                 <h1>@item</h1>
+                                             }
+                                             <h2>List of Numbers</h2>
+
+                                             @foreach (var items in NumberList)
+                                             {
+                                                 <h1>@items</h1>
+                                             }
+
+                                         </div>
+    <div>
+        <h1>Escape Sequence in Razor View Engine</h1>
+        <label>My Email Address is : @@aishwarya.jadhav@dxc.com</label>
+    </div>
+    <div>
+        @{
+            var variable = 3;
+            var is_true = true;
+        }
+        <div>
+            @if (variable % 2 == 0)
+            {
+                <h2>This is if Block</h2>
+                <h2>The number 10 is Even</h2>
+            }
+            else if (variable % 2 == 1)
+            {
+                <h2>The Number 10 is Odd</h2>
+            }
+            else
+            {
+                <h2>This is Else Block</h2>
+            }
+            <div>
+                @(variable == 3 ? "Number is eual to 3" : "Number is not equal to 3")
+                @(is_true == true ? "Condition is true" : "Condition is not true")
+            </div>
+        </div>
+        <h2>Loops in Razor</h2>
+        <div>
+            @for (int i = 0; i < 10; i++)
+            {
+                <h1>Hello,This is for loop</h1>
+            }
+        </div>
+    </div>
+</body>
+</html>
