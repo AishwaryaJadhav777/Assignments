@@ -1,0 +1,116 @@
+//index.cshtml
+
+@using MVCBuiltHelper.Models
+@model Student
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>First</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("MyForm"))
+        {
+            <label>Name @Html.TextBoxFor(x => x.Name)</label>
+            <br />
+            <br />
+            <label>Password @Html.PasswordFor(x => x.Password)</label>
+            <br />
+            <br />
+            <p>
+                Gender<br />
+                <label>Male   @Html.RadioButton("Gender", "Male", true, new { id = "Male" })</label><br />
+                <label>Female @Html.RadioButton("Gender", "Female", true, new { id = "Female" })</label>
+            </p>
+            <label>Address    @Html.TextAreaFor(x => x.Address)</label>
+            <br />
+            <br />
+            <p>
+                Hobbies<br />
+                <label>Dancing @Html.CheckBox("Dancing")</label><br />
+                <label>Singing @Html.CheckBox("Singing")</label>
+
+            </p>
+            <p>
+                Skills<br />
+                @Html.DropDownList("Skills", new List<SelectListItem> {
+
+                 new SelectListItem { Text = "Choose your skills", Value = "-1" },
+                 new SelectListItem { Text = "C", Value = "1" },
+                 new SelectListItem { Text = "C++", Value = "2" },
+                 new SelectListItem { Text = "Java", Value = "3" },
+                 new SelectListItem { Text = "Python", Value = "4" },
+                 },
+                 new {@class="custom-select"}))
+            </p>
+
+            <p>
+                Courses<br />
+                @Html.DropDownList("Skills", new List<SelectListItem> {
+
+                 new SelectListItem { Text = "Choose your Course", Value = "-1" },
+                 new SelectListItem { Text = "C", Value = "1" },
+                 new SelectListItem { Text = "C++", Value = "2" },
+                 new SelectListItem { Text = "Java", Value = "3" },
+                 new SelectListItem { Text = "Python", Value = "4" },
+                 },
+                 new {@class="custom-select"}))
+            </p>
+
+        }
+        <input type="submit" value="Register" Test="Your input is Submitted" />
+    </div>
+</body>
+</html>
+
+
+//Student.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MVCBuiltHelper.Models;
+
+namespace MVCBuiltHelper.Models
+{
+    public class Employee
+    {
+        public string Name { get; set; }
+        public string Password { get; set; }
+        public string Gender { get; set; }
+        public string Address { get; set; }
+        public string Hobbies { get; set; }
+        public string Cources { get; set; }
+        public string Skills { get; set; }
+    }
+}
+
+
+//indexController.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using MVCBuiltHelper.Models;
+
+namespace MVCBuiltHelper.Controllers
+{
+    public class FirstController : Controller
+    {
+        // GET: First
+        public ActionResult First()
+        {
+            return View();
+        }
+       
+    }
+}
