@@ -1,0 +1,81 @@
+//index.cshtml
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @helper MyListHelper(string[] str)
+        {
+            <ul>
+                @foreach (var item in str)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+    <div>
+        @helper Numbers(int[] num)
+            {
+            <ol>
+            @foreach(var items in num)
+            {
+                <li>@items</li>
+            }
+            </ol>
+             }
+    </div>
+
+    <div>
+        <label>List of Cricketers</label>
+        <div>@MyListHelper(new string[] { "Rohit", "Sharma", "Virat", "Kohali" })</div>
+    </div>
+
+    <div>
+        <label>List of Colors</label>
+        <div>@MyListHelper(new string[] { "White", "Black", "Blue", "Red" })</div>
+    </div>
+
+    <div>
+        <label>List of Flowers</label>
+        <div>@MyListHelper(new string[] { "Dezy", "Lotus", "Deliya", "Tulips" })</div>
+    </div>
+    <div>
+        <label>Numbers</label>
+        <div>@Numbers(new int[] {10,20,30,40,50,60,70,80,90,100 })</div>
+    </div>
+    <div>
+        @helper Addhelper(int a,int b)
+            {
+                <label>Addition of Two Numbers : @(a+b)</label>
+            }
+    </div>
+    <div style="background-color:coral">
+        <label>@Addhelper(100,200)</label>
+    </div>
+    <div>
+        @helper PrintHelper(string message)
+            {
+    <label>@message</label>
+    }
+    </div>
+    <div style="background-color:aqua">
+        <label> @PrintHelper("Hello to the World from Inline HTML Helper")</label>
+    </div>
+    
+    <div>
+        @{
+            string[] strbooks = new string[] { "C#", "Python", "Java", "MVC", "C++" };
+        }
+    <div>@strbooks</div>
+    </div>
+</body>
+</html>
