@@ -1,0 +1,122 @@
+@model Pro.Models.UserModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2 style="color:lime">User Registeration</h2>
+
+
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @if (ViewBag.data != null)
+        {
+            <script type="text/javascript">
+                window.onload = function () {
+                    alert("@ViewBag.data");
+                };
+            </script>
+        }
+
+
+        <h4>
+            <div class="form-group"style="color:aqua">
+                @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </h4>
+
+        <h4>
+            <div class="form-group"style="color:aqua">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </h4>
+
+        <h4>
+            <div class="form-group"style="color:aqua">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </h4>
+
+        <h4>
+            <div class="form-group"style="color:aqua">
+            @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
+            </div>
+            </div></h4>
+
+    <h4><div class="form-group"style="color:aqua">
+        @Html.LabelFor(model => model.Date_of_Birth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Date_of_Birth, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Date_of_Birth, "", new { @class = "text-danger" })
+        </div>
+    </div></h4>
+
+    <h4> <div class="form-group"style="color:aqua">
+        @Html.LabelFor(model => model.Contact, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Contact, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Contact, "", new { @class = "text-danger" })
+        </div>
+    </div></h4>
+
+    <h4><div class="form-group" style="color:aqua">
+        @Html.LabelFor(model => model.IFSC_Code, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.IFSC_Code, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.IFSC_Code, "", new { @class = "text-danger" })
+        </div>
+    </div></h4>
+
+    <h4>
+        <div class="form-group" style="color:aqua">
+            @Html.LabelFor(model => model.Account_Number, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Account_Number, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Account_Number, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </h4>
+
+    <h4>
+        <div class="form-group"style="color:aqua">
+            @Html.LabelFor(model => model.Account_Type, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Account_Type, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Account_Type, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </h4>
+
+    <h4>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="btn btn-default" style="height:50px;width:120px;font-weight:bold;font-size:15px;background-color:lime" />
+            </div>
+        </div>
+    </h4>
+</div>
+}
+
+

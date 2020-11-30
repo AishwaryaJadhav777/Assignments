@@ -1,0 +1,49 @@
+@model Pro.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2 style="color:lime">Login Page</h2>
+
+@using (Html.BeginForm("Login","Account",FormMethod.Post)) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <h4>
+        <div class="form-group"style="color:aqua">
+            @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </h4>
+
+
+
+    <h4>
+        <div class="form-group"style="color:aqua">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </h4>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+             <input type="submit" value="Login" class="btn btn-default" style="height:40px;width:100px;font-weight:bold;background-color:lime"/>
+        </div>
+    </div>
+</div>
+}
+
+
